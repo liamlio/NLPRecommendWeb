@@ -41,7 +41,7 @@ mccabe==0.6.1
 numpy==1.18.0
 oauthlib==3.1.0
 opt-einsum==3.1.0
-Pillow==5.3.0
+Pillow==6.2.0
 pipenv==2018.11.26
 protobuf==3.11.2
 pyasn1==0.4.7
