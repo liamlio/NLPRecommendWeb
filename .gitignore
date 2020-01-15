@@ -1,3 +1,9 @@
 .vscode
 __pycache__
 NLPRecommendWeb-56bda170b308.json
+scibert_scivocab_uncased.tar
+AbstractSimVectors.npy
+CitationSimilarityVectors106Epochs.npy
+TitlesIdsAbstractsEmbedIdsCOMPLETE_12-30-19.json.gzip
+tfworld.zip
+scibert_scivocab_uncased

@@ -2,7 +2,6 @@
 from flask import render_template, url_for, flash, redirect
 from webapp import app, db, bcrypt
 from webapp.forms import QueryForm
-from webapp.models import User, Post
 from webapp.tfworld import Infer
 
 @app.route("/", methods=['GET', 'POST'])

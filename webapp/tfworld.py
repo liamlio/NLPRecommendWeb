@@ -1,14 +1,5 @@
 
 #Download and load model, embeddings, and data, will take a several minutes. Double click on this to pop open the hood and checkout the code.
-import wget
-import gdown
-
-gdown.download("https://drive.google.com/uc?id=10LV9QbZOkUyOzR4nh8hxesoKJhpmvpM9", "CitationSimilarityVectors106Epochs.npy", quiet=True, proxy=None)   # citation vectors
-gdown.download("https://drive.google.com/open?id=1wIRsAApaE2L7E1fjnDOSSVBG1fY-LT9i", "tfworld.zip", quiet=True, proxy=None)
-gdown.download("https://drive.google.com/uc?id=1-23aNm7j0bnycvyd_OaQfofVYPTewgOI", "AbstractSimVectors.npy", quiet=True, proxy=None)
-gdown.download("https://drive.google.com/uc?id=1NyUQwgUNj9bFsiCnZ2TfKmWn5r-Y6wav", "TitlesIdsAbstractsEmbedIdsCOMPLETE_12-30-19.json.gzip", quiet=True, proxy=None)
-url = 'https://s3-us-west-2.amazonaws.com/ai2-s2-research/scibert/huggingface_pytorch/scibert_scivocab_uncased.tar'
-wget.download(url) 
 import tarfile
 weights = tarfile.open('scibert_scivocab_uncased.tar')
 weights.extractall()
