@@ -1,8 +1,8 @@
 
 #Download and load model, embeddings, and data, will take a several minutes. Double click on this to pop open the hood and checkout the code.
-import tarfile
-weights = tarfile.open('scibert_scivocab_uncased.tar')
-weights.extractall()
+# import tarfile
+# weights = tarfile.open('scibert_scivocab_uncased.tar')
+# weights.extractall()
 
 
 import numpy as np
