@@ -1,4 +1,4 @@
-FROM python:3.7
+FROM tensorflow/tensorflow:latest
 
 
 COPY ./requirements.txt /NLPRecommendWeb/webapp/requirements.txt
