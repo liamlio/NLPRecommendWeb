@@ -2,14 +2,16 @@
 from flask import render_template, url_for, flash, redirect
 from webapp import app, db, bcrypt
 from webapp.forms import QueryForm
-from webapp.tfworld import Infer
+#from webapp.tfworld import Infer
 
 @app.route("/", methods=['GET', 'POST'])
 @app.route("/home", methods=['GET', 'POST'])
 def home():
     form = QueryForm()
     if form.validate_on_submit():
-        title, abstractR, link = Infer(query=form.query.data, top_k_results=form.top_k.data)
+        #title, abstractR, link = Infer(query=form.query.data, top_k_results=form.top_k.data)
+        title, abstractR, link = ["Test"], ["Testing"], ["testing.com"]
+        flash(title[0])
         flash(title[0])
         flash('Generating Recommendations')
         return redirect(url_for('home'))
