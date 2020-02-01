@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+{% block content %}
+{%for i in range(0, length)%}
+  <h3>{{ title[i] }}</h3>
+  <p> {{ abstract[i] }}</p>
+  <a href="{{ link[i] }}">{{ link[i] }}</a>
+  {% if i <= length-2 %}
+    <hr>
+  {% else %}
+    <br><br>
+  {% endif %}
+
+{% endfor %}
+{% endblock content %}

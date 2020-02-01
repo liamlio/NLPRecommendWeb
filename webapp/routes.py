@@ -1,4 +1,3 @@
-
 from flask import render_template, url_for, flash, redirect
 from webapp import app, db, bcrypt
 from webapp.forms import QueryForm
@@ -10,18 +9,20 @@ def home():
     form = QueryForm()
     if form.validate_on_submit():
         #title, abstractR, link = Infer(query=form.query.data, top_k_results=form.top_k.data)
-        title, abstractR, link = ["Test"], ["Testing"], ["testing.com"]
-        flash(title[0])
-        flash(title[0])
-        flash('Generating Recommendations')
-        return redirect(url_for('home'))
+        title, abstractR, link = ["A Paper About Something", "Another Paper About Something Else", "One Last Paper"], ["Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam finibus augue ex, ut bibendum turpis dignissim sed. Fusce rutrum orci ut auctor efficitur. Aliquam nibh nibh, porttitor sit amet lacus sit amet, facilisis ultrices urna. Donec sit amet magna quis urna maximus vehicula. Nullam lacinia augue at diam accumsan, et laoreet odio elementum. Fusce accumsan metus ante, eu eleifend massa finibus sed. Vivamus interdum, sem sed auctor finibus, ante metus consectetur leo, sit amet hendrerit libero libero ac lacus. Morbi accumsan id erat sit amet auctor. Sed tempus tincidunt risus tempus gravida.", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam finibus augue ex, ut bibendum turpis dignissim sed. Fusce rutrum orci ut auctor efficitur. Aliquam nibh nibh, porttitor sit amet lacus sit amet, facilisis ultrices urna. Donec sit amet magna quis urna maximus vehicula. Nullam lacinia augue at diam accumsan, et laoreet odio elementum. Fusce accumsan metus ante, eu eleifend massa finibus sed. Vivamus interdum, sem sed auctor finibus, ante metus consectetur leo, sit amet hendrerit libero libero ac lacus. Morbi accumsan id erat sit amet auctor. Sed tempus tincidunt risus tempus gravida", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam finibus augue ex, ut bibendum turpis dignissim sed. Fusce rutrum orci ut auctor efficitur. Aliquam nibh nibh, porttitor sit amet lacus sit amet, facilisis ultrices urna. Donec sit amet magna quis urna maximus vehicula. Nullam lacinia augue at diam accumsan, et laoreet odio elementum. Fusce accumsan metus ante, eu eleifend massa finibus sed. Vivamus interdum, sem sed auctor finibus, ante metus consectetur leo, sit amet hendrerit libero libero ac lacus. Morbi accumsan id erat sit amet auctor. Sed tempus tincidunt risus tempus gravida."], ["https://google.com", "https://google.com", "https://google.com"]
+        length = len(title)
+        return render_template('results.html', title=title, abstract=abstractR, length=length, link=link)
+        flash('')
     return render_template('home.html', title='NLPRecommendations' , form=form)
 
 
 @app.route("/about")
 def about():
-    return redirect(url_for('home')) #Would change to
+    return render_template('about.html', title='NLPRecommendations') #Would change to
 
+#@app.route("/results")
+#def results(titleab):
+#    return titleab
 
 # @app.route("/register", methods=['GET', 'POST'])
 # def register():
