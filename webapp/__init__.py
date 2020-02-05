@@ -2,7 +2,7 @@ from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 from flask_bcrypt import bcrypt
 from flask_ngrok import run_with_ngrok
-from flask.ext.session import Session
+#from flask.ext.session import Session
 
 app = Flask(__name__)
 
