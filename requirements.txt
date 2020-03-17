@@ -15,7 +15,7 @@ Flask-Bcrypt==0.7.1
 Flask-Login==0.4.1
 Flask-Mail==0.9.1
 Flask-SQLAlchemy>=2.3.2
-Flask-WTF==0.14.2
+Flask-WTF==0.14.3
 gast==0.2.2
 grpcio==1.26.0
 h5py==2.10.0
