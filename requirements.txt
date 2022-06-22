@@ -30,7 +30,7 @@ lazy-object-proxy==1.4.3
 Markdown==3.1.1
 MarkupSafe==1.0
 mccabe==0.6.1
-numpy==1.18.0
+numpy==1.22.0
 oauthlib==3.1.0
 opt-einsum==3.1.0
 Pillow>=5.3.0
